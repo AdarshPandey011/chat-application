@@ -12,7 +12,7 @@ A modern, scalable real-time chat application built with microservices architect
 - **Responsive design** with Tailwind CSS
 - **OAuth authentication** (Google, GitHub)
 - **File sharing** (images, documents)
-- **AI-powered text suggestions** using TensorFlow.js
+- **Smart text suggestions** using TensorFlow.js
 - **Dark/Light theme** support
 - **Message reactions** and typing indicators
 - **Demo mode** for testing without backend

@@ -1,22 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { textSuggestionService } from '@/lib/ai/textSuggestions'
+import { textSuggestionService } from '@/lib/suggestions/textSuggestions'
 import { LightBulbIcon } from '@heroicons/react/24/outline'
 
-interface AISuggestionsProps {
+interface SmartSuggestionsProps {
   inputText: string
   onSuggestionClick: (suggestion: string) => void
   enabled?: boolean
 }
 
-export function AISuggestions({ inputText, onSuggestionClick, enabled = true }: AISuggestionsProps) {
+export function SmartSuggestions({ inputText, onSuggestionClick, enabled = true }: SmartSuggestionsProps) {
   const [suggestions, setSuggestions] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [isModelLoaded, setIsModelLoaded] = useState(false)
 
   useEffect(() => {
-    // Initialize the AI model
+    // Initialize the text suggestion model
     const initModel = async () => {
       if (enabled && !isModelLoaded) {
         setIsLoading(true)
@@ -24,7 +24,7 @@ export function AISuggestions({ inputText, onSuggestionClick, enabled = true }: 
           await textSuggestionService.loadModel()
           setIsModelLoaded(true)
         } catch (error) {
-          console.error('Failed to load AI model:', error)
+          console.error('Failed to load text model:', error)
         } finally {
           setIsLoading(false)
         }
@@ -66,7 +66,7 @@ export function AISuggestions({ inputText, onSuggestionClick, enabled = true }: 
     <div className="absolute bottom-full left-0 right-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-10">
       <div className="flex items-center space-x-2 mb-2">
         <LightBulbIcon className="h-4 w-4 text-yellow-500" />
-        <span className="text-xs font-medium text-gray-600">AI Suggestions</span>
+        <span className="text-xs font-medium text-gray-600">Smart Suggestions</span>
         {isLoading && (
           <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-primary-600"></div>
         )}

@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import { PaperAirplaneIcon, PaperClipIcon, PhotoIcon } from '@heroicons/react/24/outline'
 import { useDropzone } from 'react-dropzone'
 import { formatFileSize } from '@/lib/utils'
-import { AISuggestions } from './AISuggestions'
+import { SmartSuggestions } from './SmartSuggestions'
 
 interface MessageInputProps {
   onSendMessage: (content: string, type?: string, fileData?: any) => void
@@ -128,8 +128,8 @@ export function MessageInput({ onSendMessage, onTyping }: MessageInputProps) {
             isDragActive ? 'border-primary-500 bg-primary-50' : 'border-gray-300'
           }`}
         >
-          {/* AI Suggestions */}
-          <AISuggestions
+          {/* Smart Text Suggestions */}
+          <SmartSuggestions
             inputText={message}
             onSuggestionClick={(suggestion) => {
               setMessage(suggestion)

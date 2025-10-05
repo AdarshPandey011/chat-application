@@ -15,9 +15,9 @@ class TextSuggestionService {
 
   async loadModel() {
     try {
-      console.log('Loading DistilGPT-2 model...')
+      console.log('Loading text suggestion model...')
       
-      // In a real implementation, you would load a pre-trained DistilGPT-2 model
+      // In a real implementation, you would load a pre-trained text generation model
       // For this demo, we'll create a simple transformer-like model
       const model = tf.sequential({
         layers: [

@@ -3,8 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-// Quick demo component for testing without backend
-// TODO: Remove this in production
+// Demo component for testing without backend setup
 export function DemoMode() {
   const [showDemo, setShowDemo] = useState(false)
   const router = useRouter()
