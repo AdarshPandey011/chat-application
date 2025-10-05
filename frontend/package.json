@@ -1,0 +1,45 @@
+{
+  "name": "chatapp-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "@apollo/client": "^3.8.8",
+    "graphql": "^16.8.1",
+    "socket.io-client": "^4.7.4",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.2.0",
+    "framer-motion": "^10.16.16",
+    "react-hook-form": "^7.48.2",
+    "@hookform/resolvers": "^3.3.2",
+    "zod": "^3.22.4",
+    "react-hot-toast": "^2.4.1",
+    "date-fns": "^3.0.6",
+    "react-dropzone": "^14.2.3",
+    "@tensorflow/tfjs": "^4.15.0",
+    "jwt-decode": "^4.0.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/jwt-decode": "^3.1.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
+  }
+}
